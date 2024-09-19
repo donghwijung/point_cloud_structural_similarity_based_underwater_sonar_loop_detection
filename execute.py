@@ -12,13 +12,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Arguments parser.")
 
     parser.add_argument('--data_path', type=str, default="data", help='The path of data directory')
-    parser.add_argument('--data_idx', type=int, default=0, help='The index of dataset')
+    parser.add_argument('--data_id', type=int, default=0, help='The index of dataset')
     parser.add_argument('--neighborhood_size', type=int, default=100, help='The number of nearest neighborhoods')
     parser.add_argument('--score_threshold', type=float, default=2.95, help='The threshold to determine whether a loop or not')
     args = parser.parse_args()
 
     dataset_names = ["antarctica","wiggles_bank","north_river","dutch_harbor","beach_pond"] ## wiggles_bank, north_river, dutch_harbor, beach_pond are seaward dataset
-    dataset_name = dataset_names[args.data_idx]
+    dataset_name = dataset_names[args.data_id]
 
     estimator_types = ["VAR", "Mean"]
     pooling_types = ["Mean"]

@@ -3,18 +3,30 @@
 ## Description
 This is an implentation of *"Point cloud structural similarity-based underwater sonar loop detection"* which indicates detecting loops based on the structural similarity of point clouds generated from the data acquired by MBES.
 
+## Installation
+```bash
+conda env create -f environment.yaml
+conda activate PCSS
+```
+
 ## Dataset
+### Download
 - Download datasets [link](https://drive.google.com/drive/folders/1MV_GaNRxmcbjUQT7r6kNH1NtUX6jMK07?usp=sharing)
 - Unzip the downloaded dataset
-
-## Installation
+### Data processing
+If you would like to generate the data yourself, follow the process outlined below.
+To process the Antarctica dataset, the *auv_lib* library must be installed. The *antarctica_2019.cereal* file is also required. You can download the file [here](https://drive.google.com/drive/folders/1UWxJw6cNCvzowqWpzo5eSEUT_0734tsG).
+```bash
+python generate_data_from_antarctica.py
 ```
-conda env create -f environment.yaml
+or
+```bash
+python generate_data_from_seaward.py
+# ex) python  generate_data_from_seaward.py --data_id 3
 ```
 
 ## Execution
-```
-conda activate PCSS
+```bash
 python execute.py
 # ex) python execute.py --data_path data --data_id 1 --neighborhood_size 100 --score_threshold 2.95
 ```

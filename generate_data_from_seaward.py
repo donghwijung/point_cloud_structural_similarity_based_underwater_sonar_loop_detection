@@ -16,7 +16,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Arguments parser.")
 
     parser.add_argument('--data_path', type=str, default="data", help='The path of data directory')
-    parser.add_argument('--data_idx', type=int, default=0, help='The index of dataset')
+    parser.add_argument('--data_id', type=int, default=0, help='The index of dataset')
     parser.add_argument('--divide_size', type=int, default=15, help='The number of processes to execute in parallel')
     parser.add_argument('--points_size', type=int, default=8192, help='The number of points in a point cloud')
     args = parser.parse_args()
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     points_size = args.points_size
 
     dataset_names = ["wiggles_bank","north_river","dutch_harbor","beach_pond"]
-    dataset_name = dataset_names[args.data_idx]
+    dataset_name = dataset_names[args.data_id]
     print(f"{dataset_name} is selected")
 
     if dataset_name.startswith("wiggles_bank"):
