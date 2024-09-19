@@ -35,22 +35,23 @@ if __name__ == "__main__":
     if "/" in dataset_name:
         dataset_name = dataset_name.split("/")[0]
 
-    data_path = f"{args.data_path}/{dataset_name}"
+    data_path = os.path.join(args.data_path, dataset_name)
+    processed_dir_path = os.path.join(data_path, "processed")
 
     print(f"Test on {dataset_name} dataset. {data_path} {neighborhood_size} {score_threshold}")   
 
-    with open(os.path.join(data_path, "positive_pairs.pkl"), "rb") as f:
+    with open(os.path.join(processed_dir_path, "positive_pairs.pkl"), "rb") as f:
         test_pair_positive = pickle.load(f)
-    with open(os.path.join(data_path, "negative_pairs.pkl"), "rb") as f:
+    with open(os.path.join(processed_dir_path, "negative_pairs.pkl"), "rb") as f:
         test_pair_negative = pickle.load(f)
 
     test_pair_positive = np.array(test_pair_positive)
     test_pair_negative = np.array(test_pair_negative)
 
     print("Proceed with positive loop pairs")
-    negative_sims_wrapper = pairs_to_sims_wrapper(test_pair_negative, data_path, neighborhood_size, radius, estimator_types, pooling_types)
+    negative_sims_wrapper = pairs_to_sims_wrapper(test_pair_negative, processed_dir_path, neighborhood_size, radius, estimator_types, pooling_types)
     print("Proceed with negative loop pairs")
-    positive_sims_wrapper = pairs_to_sims_wrapper(test_pair_positive, data_path, neighborhood_size, radius, estimator_types, pooling_types)
+    positive_sims_wrapper = pairs_to_sims_wrapper(test_pair_positive, processed_dir_path, neighborhood_size, radius, estimator_types, pooling_types)
 
     sum_positive_sims_wrapper = np.sum(positive_sims_wrapper.reshape(-1,3*2), axis=1)
     sum_negative_sims_wrapper = np.sum(negative_sims_wrapper.reshape(-1,3*2), axis=1)
