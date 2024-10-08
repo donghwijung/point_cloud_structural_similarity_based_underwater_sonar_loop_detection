@@ -33,7 +33,7 @@ python execute.py
 ```
 
 ## Acknowledgements
-The codes and datasets in this repository are based on [PointSSIM](https://github.com/mmspg/pointssim), [Antarctica](https://github.com/tjr16/bathy_nn_learning), and [Seaward](https://seaward.science/data/pos/), as listed below. Thanks to the authors of these codes and datasets.
+The codes and datasets in this repository are based on [PointSSIM](https://github.com/mmspg/pointssim), [Antarctica](https://github.com/tjr16/bathy_nn_learning), and [Seaward](https://seaward.science/data/pos/). Thanks to the authors of these codes and datasets.
 
 ## Citation
 ```
