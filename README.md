@@ -4,6 +4,11 @@
 ## Description
 This is an implentation of *"Point cloud structural similarity-based underwater sonar loop detection"* which indicates detecting loops based on the structural similarity of point clouds generated from the data acquired by MBES.
 
+## Dependencies
+- The script [generate_data_from_antarctica.py](https://github.com/donghwijung/point_cloud_structural_similarity_based_underwater_sonar_loop_detection/blob/main/generate_data_from_antarctica.py) relies on the [AUVLib](https://github.com/nilsbore/auvlib) library.
+  - To run this script, follow the setup instructions provided in the AUVLib repository.
+  - All other scripts in this project are independent of AUVLib.
+
 ## Installation
 ```bash
 conda env create -f environment.yaml
