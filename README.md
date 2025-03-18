@@ -1,8 +1,19 @@
 # Point Cloud Structural Similarity-based Underwater Sonar Loop Detection
-[Video](https://youtu.be/F8Zh1s3K5B0?si=FK9frEYHT4N8JNNN), [Paper](https://arxiv.org/pdf/2409.14020)
+[[Video 📺]](https://youtu.be/DiC95bhBz6Q?si=6keI8v7SZbz1RMCQ), [[Paper 📖]](https://arxiv.org/pdf/2409.14020)
 
-## Description
-This is an implentation of *"Point cloud structural similarity-based underwater sonar loop detection"* which indicates detecting loops based on the structural similarity of point clouds generated from the data acquired by MBES.
+[Donghwi Jung](https://donghwijung.github.io/), [Andres Pulido](https://andrespulido8.github.io/), [Jane Shin](https://janeshin-website.github.io/people/jane/), [Seong-Woo Kim](https://arisnu.squarespace.com/director)
+
+This is an implentation of *"Point cloud structural similarity-based underwater sonar loop detection"* which indicates **detecting loops based on the structural similarity of point clouds generated from the data acquired by MBES**.
+
+<p align="center">
+  <img src="./images/fig4.jpg">
+</p>
+
+## System Overview
+<p align="center">
+  <img src="./images/fig1.jpg">
+</p>
+
 
 ## Dependencies
 - The script [generate_data_from_antarctica.py](https://github.com/donghwijung/point_cloud_structural_similarity_based_underwater_sonar_loop_detection/blob/main/generate_data_from_antarctica.py) relies on the [AUVLib](https://github.com/nilsbore/auvlib) library.
@@ -42,10 +53,11 @@ The codes and datasets in this repository are based on [PointSSIM](https://githu
 
 ## Citation
 ```
-@article{jung2024point,
-  title={Point Cloud Structural Similarity-based Underwater Sonar Loop Detection},
+@article{jung2025point,
+  title={Point Cloud Structural Similarity-Based Underwater Sonar Loop Detection},
   author={Jung, Donghwi and Pulido, Andres and Shin, Jane and Kim, Seong-Woo},
-  journal={arXiv preprint arXiv:2409.14020},
-  year={2024}
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  publisher={IEEE}
 }
 ```
