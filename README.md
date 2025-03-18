@@ -1,5 +1,5 @@
 # Point Cloud Structural Similarity-based Underwater Sonar Loop Detection
-[[Video 📺]](https://youtu.be/DiC95bhBz6Q?si=6keI8v7SZbz1RMCQ), [[Paper 📖]](https://arxiv.org/pdf/2409.14020)
+[[Video 📺]](https://youtu.be/DiC95bhBz6Q?si=6keI8v7SZbz1RMCQ), [[Paper 📖]](https://arxiv.org/abs/2409.14020)
 
 [Donghwi Jung](https://donghwijung.github.io/), [Andres Pulido](https://andrespulido8.github.io/), [Jane Shin](https://janeshin-website.github.io/people/jane/), [Seong-Woo Kim](https://arisnu.squarespace.com/director)
 
